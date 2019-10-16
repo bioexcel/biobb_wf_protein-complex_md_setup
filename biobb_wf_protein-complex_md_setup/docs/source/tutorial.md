@@ -1,6 +1,6 @@
 
 # Protein Ligand Complex MD Setup tutorial using BioExcel Building Blocks (biobb)
-### Based on the official Gromacs tutorial: http://www.mdtutorials.com/gmx/complex/index.html
+**Based on the official Gromacs tutorial: http://www.mdtutorials.com/gmx/complex/index.html**
 ***
 This tutorial aims to illustrate the process of **setting up a simulation system** containing a **protein in complex with a ligand**, step by step, using the **BioExcel Building Blocks library (biobb)**. The particular example used is the **T4 lysozyme** L99A/M102Q protein (PDB code 3HTB), in complex with the **2-propylphenol** small molecule (3-letter Code JZ4). 
 ***
@@ -46,8 +46,8 @@ Conda **Installation**:
  17. [Output Files](#output)
  
 ***
- ***
-![Bioexcel2_logo_400px_transp.png](attachment:Bioexcel2_logo_400px_transp.png)
+<img src="https://bioexcel.eu/wp-content/uploads/2019/04/Bioexcell_logo_1080px_transp.png" alt="Bioexcel2 logo"
+    title="Bioexcel2 logo" width="400" />
 ***
 
 <a id="input"></a>
@@ -158,7 +158,7 @@ ipywidgets.HBox([view1, view2, view3])
 ```
 
 
-<img style='float:left;width:33%' src='ngl1.png'></img><img style='float:left;width:33%' src='ngl2.png'></img><img style='float:left;width:33%' src='ngl3.png'></img>
+<img style='float:left;width:33%' src='_static/ngl1.png'></img><img style='float:left;width:33%' src='_static/ngl2.png'></img><img style='float:left;width:33%' src='_static/ngl3.png'></img>
 
 
 
@@ -318,12 +318,12 @@ ipywidgets.HBox([view1, view2, view3])
 ```
 
 
-<img style='float:left;width:33%' src='ngl4.png'></img><img style='float:left;width:33%' src='ngl5.png'></img><img style='float:left;width:33%' src='ngl6.png'></img>
+<img style='float:left;width:33%' src='_static/ngl4.png'></img><img style='float:left;width:33%' src='_static/ngl5.png'></img><img style='float:left;width:33%' src='_static/ngl6.png'></img>
 
 
 
 <a id="ligandTopologyStep3"></a>
-### Step 3: Generate **ligand topology** (parameters).
+### Step 3: Generate **ligand topology** (parameters).
 
 
 ```python
@@ -1376,8 +1376,3 @@ Important **Output files** generated:
  - 3HTB_JZ4_rms_exp.xvg: **Root Mean Square deviation (RMSd)** against **experimental structure** of the final **free MD run step**.
  - 3HTB_JZ4_rgyr.xvg: **Radius of Gyration** of the final **free MD run step** of the **setup pipeline**.
  
-
-
-```python
-
-```
