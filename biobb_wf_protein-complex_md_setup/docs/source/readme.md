@@ -1,3 +1,4 @@
+[![](https://readthedocs.org/projects/biobb-wf-protein-complex-md-setup/badge/?version=latest)](https://biobb-wf-protein-complex-md-setup.readthedocs.io/en/latest/?badge=latest)
 
 # Protein Ligand Complex MD Setup tutorial using BioExcel Building Blocks (biobb)
 
@@ -37,9 +38,7 @@ conda install -c bioconda biobb_Protein-Ligand_MD_setup //// NOTE: this is not y
 
 ## Tutorial
 
-Click here to [view tutorial in Read the Docs]()
-
-Click here to [execute tutorial in Binder]()
+Click here to [view tutorial in Read the Docs](https://biobb-wf-protein-complex-md-setup.readthedocs.io/en/latest/index.html)
 
 ***
 
