@@ -1,4 +1,4 @@
-name: biobb_wf_protein-complex_md_setup_tutorial
+name: biobb_Protein-Complex_MDsetup_tutorial
 channels:
   - conda-forge
   - bioconda
