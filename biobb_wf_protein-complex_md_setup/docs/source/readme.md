@@ -1,4 +1,5 @@
 [![](https://readthedocs.org/projects/biobb-wf-protein-complex-md-setup/badge/?version=latest)](https://biobb-wf-protein-complex-md-setup.readthedocs.io/en/latest/?badge=latest)
+[![](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/bioexcel/biobb_wf_protein-complex_md_setup/master?filepath=biobb_wf_protein-complex_md_setup%2Fnotebooks%2Fbiobb_Protein-Complex_MDsetup_tutorial.ipynb)
 
 # Protein Ligand Complex MD Setup tutorial using BioExcel Building Blocks (biobb)
 
