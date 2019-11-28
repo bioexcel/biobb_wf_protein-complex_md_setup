@@ -4,10 +4,10 @@ channels:
   - bioconda
 dependencies:
   - python==3.6
-  - biobb_analysis==2.0.1 
   - biobb_common==2.0.1
-  - biobb_io==2.0.0
-  - biobb_model==1.1.9
+  - biobb_analysis==2.0.1
+  - biobb_io==2.0.1
+  - biobb_model==2.0.0
   - biobb_md==2.0.0
   - biobb_chemistry==2.0.0
   - biobb_structure_utils==2.0.0
