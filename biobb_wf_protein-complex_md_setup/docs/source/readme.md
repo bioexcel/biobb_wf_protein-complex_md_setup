@@ -33,7 +33,7 @@ This tutorial aims to illustrate the process of **setting up a simulation system
 ### Conda Installation
 
 ```console
-conda install -c bioconda biobb_Protein-Ligand_MD_setup //// NOTE: this is not yet available ////
+conda env create -f binder/environment.yml
 ```
 
 ***
