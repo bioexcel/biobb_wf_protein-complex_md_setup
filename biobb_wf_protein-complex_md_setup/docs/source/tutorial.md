@@ -15,6 +15,7 @@ This tutorial aims to illustrate the process of **setting up a simulation system
  
 **Auxiliar libraries** used:
 
+ - [nb_conda_kernels](https://github.com/Anaconda-Platform/nb_conda_kernels): Enables a Jupyter Notebook or JupyterLab application in one conda environment to access kernels for Python, R, and other languages found in other environments.
  - [nglview](http://nglviewer.org/#nglview): Jupyter/IPython widget to interactively view molecular structures and trajectories in notebooks.
  - [ipywidgets](https://github.com/jupyter-widgets/ipywidgets): Interactive HTML widgets for Jupyter notebooks and the IPython kernel.
  - [os](https://docs.python.org/3/library/os.html): Python miscellaneous operating system interfaces
@@ -22,9 +23,19 @@ This tutorial aims to illustrate the process of **setting up a simulation system
  - [simpletraj](https://github.com/arose/simpletraj): Lightweight coordinate-only trajectory reader based on code from GROMACS, MDAnalysis and VMD.
 
 
-Conda **Installation**:
+### Conda Installation and Launch
 
- - **conda install -c bioconda biobb_Protein-Ligand_MD_setup**
+```console
+git clone https://github.com/bioexcel/biobb_wf_protein-complex_md_setup.git
+cd biobb_wf_protein-complex_md_setup
+conda env create -f conda_env/environment.yml
+conda activate biobb_Protein-Complex_MDsetup_tutorial
+conda install -y -c bioconda biobb_analysis==2.0.1
+conda install -y -c bioconda biobb_chemistry==2.0.0
+jupyter-nbextension enable --py --user widgetsnbextension
+jupyter-nbextension enable --py --user nglview
+jupyter-notebook biobb_wf_protein-complex_md_setup/notebooks/biobb_Protein-Complex_MDsetup_tutorial.ipynb
+```
 
 ***
 ### Pipeline steps:

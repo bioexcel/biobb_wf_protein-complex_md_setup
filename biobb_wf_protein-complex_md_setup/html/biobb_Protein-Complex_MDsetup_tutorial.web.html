@@ -13130,16 +13130,29 @@ div#notebook {
 </ul>
 <p><strong>Auxiliar libraries</strong> used:</p>
 <ul>
+<li><a href="https://github.com/Anaconda-Platform/nb_conda_kernels">nb_conda_kernels</a>: Enables a Jupyter Notebook or JupyterLab application in one conda environment to access kernels for Python, R, and other languages found in other environments.</li>
 <li><a href="http://nglviewer.org/#nglview">nglview</a>: Jupyter/IPython widget to interactively view molecular structures and trajectories in notebooks.</li>
 <li><a href="https://github.com/jupyter-widgets/ipywidgets">ipywidgets</a>: Interactive HTML widgets for Jupyter notebooks and the IPython kernel.</li>
 <li><a href="https://docs.python.org/3/library/os.html">os</a>: Python miscellaneous operating system interfaces</li>
 <li><a href="https://plot.ly/python/offline/">plotly</a>: Python interactive graphing library integrated in Jupyter notebooks.</li>
 <li><a href="https://github.com/arose/simpletraj">simpletraj</a>: Lightweight coordinate-only trajectory reader based on code from GROMACS, MDAnalysis and VMD.</li>
 </ul>
-<p>Conda <strong>Installation</strong>:</p>
-<ul>
-<li><strong>conda install -c bioconda biobb_Protein-Ligand_MD_setup</strong></li>
-</ul>
+<h3 id="Conda-Installation">Conda Installation and Launch<a class="anchor-link" href="#Conda-Installation">&#182;</a></h3>
+
+
+<div class="input_area">
+<pre>
+  git clone https://github.com/bioexcel/biobb_wf_protein-complex_md_setup.git
+  cd biobb_wf_protein-complex_md_setup
+  conda env create -f conda_env/environment.yml
+  conda activate biobb_Protein-Complex_MDsetup_tutorial
+  conda install -y -c bioconda biobb_analysis==2.0.1
+  conda install -y -c bioconda biobb_chemistry==2.0.0
+  jupyter-nbextension enable --py --user widgetsnbextension
+  jupyter-nbextension enable --py --user nglview
+  jupyter-notebook biobb_wf_protein-complex_md_setup/notebooks/biobb_Protein-Complex_MDsetup_tutorial.ipynb
+</pre>
+</div>
 <hr>
 <h3 id="Pipeline-steps:">Pipeline steps:<a class="anchor-link" href="#Pipeline-steps:">&#182;</a></h3><ol>
 <li><a href="#input">Input Parameters</a></li>
