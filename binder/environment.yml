@@ -12,6 +12,6 @@ dependencies:
   - biobb_chemistry==2.0.0
   - biobb_structure_utils==2.0.0
   - plotly
-  - nglview
+  - nglview==1.1.7
   - simpletraj
   - conda
