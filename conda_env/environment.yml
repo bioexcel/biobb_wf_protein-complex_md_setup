@@ -5,12 +5,14 @@ channels:
 dependencies:
   - python==3.6.5
   - biobb_common==2.0.1
+  - biobb_analysis==2.0.3
   - biobb_io==2.0.1
   - biobb_model==2.0.0
   - biobb_md==2.0.0
+  - biobb_chemistry==2.0.2
   - biobb_structure_utils==2.0.0
   - nb_conda_kernels
   - plotly
-  - nglview==1.1.7
+  - nglview
   - simpletraj
   - conda

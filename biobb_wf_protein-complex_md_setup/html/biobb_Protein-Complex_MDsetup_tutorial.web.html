@@ -13144,10 +13144,6 @@ div#notebook {
   cd biobb_wf_protein-complex_md_setup
   conda env create -f conda_env/environment.yml
   conda activate biobb_Protein-Complex_MDsetup_tutorial
-  conda install -y -c bioconda biobb_analysis==2.0.1
-  conda install -y -c bioconda biobb_chemistry==2.0.0
-  jupyter-nbextension enable --py --user widgetsnbextension
-  jupyter-nbextension enable --py --user nglview
   jupyter-notebook biobb_wf_protein-complex_md_setup/notebooks/biobb_Protein-Complex_MDsetup_tutorial.ipynb
 </pre>
 </div>
@@ -13319,16 +13315,16 @@ Splitting the molecule in <strong>three different files</strong>:</p>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Show structures: protein, ligand and protein-ligand complex</span>
-<span class="n">view1</span> <span class="o">=</span> <span class="n">nglview</span><span class="o">.</span><span class="n">show_file</span><span class="p">(</span><span class="n">proteinFile</span><span class="p">)</span>
+<span class="n">view1</span> <span class="o">=</span> <span class="n">nglview</span><span class="o">.</span><span class="n">show_structure_file</span><span class="p">(</span><span class="n">proteinFile</span><span class="p">)</span>
 <span class="n">view1</span><span class="o">.</span><span class="n">_remote_call</span><span class="p">(</span><span class="s1">&#39;setSize&#39;</span><span class="p">,</span> <span class="n">target</span><span class="o">=</span><span class="s1">&#39;Widget&#39;</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;350px&#39;</span><span class="p">,</span><span class="s1">&#39;400px&#39;</span><span class="p">])</span>
 <span class="n">view1</span><span class="o">.</span><span class="n">camera</span><span class="o">=</span><span class="s1">&#39;orthographic&#39;</span>
 <span class="n">view1</span>
-<span class="n">view2</span> <span class="o">=</span> <span class="n">nglview</span><span class="o">.</span><span class="n">show_file</span><span class="p">(</span><span class="n">ligandFile</span><span class="p">)</span>
+<span class="n">view2</span> <span class="o">=</span> <span class="n">nglview</span><span class="o">.</span><span class="n">show_structure_file</span><span class="p">(</span><span class="n">ligandFile</span><span class="p">)</span>
 <span class="n">view2</span><span class="o">.</span><span class="n">add_representation</span><span class="p">(</span><span class="n">repr_type</span><span class="o">=</span><span class="s1">&#39;ball+stick&#39;</span><span class="p">)</span>
 <span class="n">view2</span><span class="o">.</span><span class="n">_remote_call</span><span class="p">(</span><span class="s1">&#39;setSize&#39;</span><span class="p">,</span> <span class="n">target</span><span class="o">=</span><span class="s1">&#39;Widget&#39;</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;350px&#39;</span><span class="p">,</span><span class="s1">&#39;400px&#39;</span><span class="p">])</span>
 <span class="n">view2</span><span class="o">.</span><span class="n">camera</span><span class="o">=</span><span class="s1">&#39;orthographic&#39;</span>
 <span class="n">view2</span>
-<span class="n">view3</span> <span class="o">=</span> <span class="n">nglview</span><span class="o">.</span><span class="n">show_file</span><span class="p">(</span><span class="n">complexFile</span><span class="p">)</span>
+<span class="n">view3</span> <span class="o">=</span> <span class="n">nglview</span><span class="o">.</span><span class="n">show_structure_file</span><span class="p">(</span><span class="n">complexFile</span><span class="p">)</span>
 <span class="n">view3</span><span class="o">.</span><span class="n">add_representation</span><span class="p">(</span><span class="n">repr_type</span><span class="o">=</span><span class="s1">&#39;licorice&#39;</span><span class="p">,</span> <span class="n">radius</span><span class="o">=</span><span class="s1">&#39;.5&#39;</span><span class="p">,</span> <span class="n">selection</span><span class="o">=</span><span class="n">ligandCode</span><span class="p">)</span>
 <span class="n">view3</span><span class="o">.</span><span class="n">_remote_call</span><span class="p">(</span><span class="s1">&#39;setSize&#39;</span><span class="p">,</span> <span class="n">target</span><span class="o">=</span><span class="s1">&#39;Widget&#39;</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;350px&#39;</span><span class="p">,</span><span class="s1">&#39;400px&#39;</span><span class="p">])</span>
 <span class="n">view3</span><span class="o">.</span><span class="n">camera</span><span class="o">=</span><span class="s1">&#39;orthographic&#39;</span>
@@ -13564,17 +13560,17 @@ Force field used in this tutorial step is <strong>amberGAFF</strong>: <a href="h
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Show different structures generated (for comparison)</span>
 
-<span class="n">view1</span> <span class="o">=</span> <span class="n">nglview</span><span class="o">.</span><span class="n">show_file</span><span class="p">(</span><span class="n">ligandFile</span><span class="p">)</span>
+<span class="n">view1</span> <span class="o">=</span> <span class="n">nglview</span><span class="o">.</span><span class="n">show_structure_file</span><span class="p">(</span><span class="n">ligandFile</span><span class="p">)</span>
 <span class="n">view1</span><span class="o">.</span><span class="n">add_representation</span><span class="p">(</span><span class="n">repr_type</span><span class="o">=</span><span class="s1">&#39;ball+stick&#39;</span><span class="p">)</span>
 <span class="n">view1</span><span class="o">.</span><span class="n">_remote_call</span><span class="p">(</span><span class="s1">&#39;setSize&#39;</span><span class="p">,</span> <span class="n">target</span><span class="o">=</span><span class="s1">&#39;Widget&#39;</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;350px&#39;</span><span class="p">,</span><span class="s1">&#39;400px&#39;</span><span class="p">])</span>
 <span class="n">view1</span><span class="o">.</span><span class="n">camera</span><span class="o">=</span><span class="s1">&#39;orthographic&#39;</span>
 <span class="n">view1</span>
-<span class="n">view2</span> <span class="o">=</span> <span class="n">nglview</span><span class="o">.</span><span class="n">show_file</span><span class="p">(</span><span class="n">output_reduce_h</span><span class="p">)</span>
+<span class="n">view2</span> <span class="o">=</span> <span class="n">nglview</span><span class="o">.</span><span class="n">show_structure_file</span><span class="p">(</span><span class="n">output_reduce_h</span><span class="p">)</span>
 <span class="n">view2</span><span class="o">.</span><span class="n">add_representation</span><span class="p">(</span><span class="n">repr_type</span><span class="o">=</span><span class="s1">&#39;ball+stick&#39;</span><span class="p">)</span>
 <span class="n">view2</span><span class="o">.</span><span class="n">_remote_call</span><span class="p">(</span><span class="s1">&#39;setSize&#39;</span><span class="p">,</span> <span class="n">target</span><span class="o">=</span><span class="s1">&#39;Widget&#39;</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;350px&#39;</span><span class="p">,</span><span class="s1">&#39;400px&#39;</span><span class="p">])</span>
 <span class="n">view2</span><span class="o">.</span><span class="n">camera</span><span class="o">=</span><span class="s1">&#39;orthographic&#39;</span>
 <span class="n">view2</span>
-<span class="n">view3</span> <span class="o">=</span> <span class="n">nglview</span><span class="o">.</span><span class="n">show_file</span><span class="p">(</span><span class="n">output_babel_min</span><span class="p">)</span>
+<span class="n">view3</span> <span class="o">=</span> <span class="n">nglview</span><span class="o">.</span><span class="n">show_structure_file</span><span class="p">(</span><span class="n">output_babel_min</span><span class="p">)</span>
 <span class="n">view3</span><span class="o">.</span><span class="n">add_representation</span><span class="p">(</span><span class="n">repr_type</span><span class="o">=</span><span class="s1">&#39;ball+stick&#39;</span><span class="p">)</span>
 <span class="n">view3</span><span class="o">.</span><span class="n">_remote_call</span><span class="p">(</span><span class="s1">&#39;setSize&#39;</span><span class="p">,</span> <span class="n">target</span><span class="o">=</span><span class="s1">&#39;Widget&#39;</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;350px&#39;</span><span class="p">,</span><span class="s1">&#39;400px&#39;</span><span class="p">])</span>
 <span class="n">view3</span><span class="o">.</span><span class="n">camera</span><span class="o">=</span><span class="s1">&#39;orthographic&#39;</span>
@@ -13964,7 +13960,7 @@ Note the <strong>octahedral box</strong> filled with <strong>water molecules</st
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Show protein</span>
-<span class="n">view</span> <span class="o">=</span> <span class="n">nglview</span><span class="o">.</span><span class="n">show_file</span><span class="p">(</span><span class="n">output_solvate_gro</span><span class="p">)</span>
+<span class="n">view</span> <span class="o">=</span> <span class="n">nglview</span><span class="o">.</span><span class="n">show_structure_file</span><span class="p">(</span><span class="n">output_solvate_gro</span><span class="p">)</span>
 <span class="n">view</span><span class="o">.</span><span class="n">clear_representations</span><span class="p">()</span>
 <span class="n">view</span><span class="o">.</span><span class="n">add_representation</span><span class="p">(</span><span class="n">repr_type</span><span class="o">=</span><span class="s1">&#39;cartoon&#39;</span><span class="p">,</span> <span class="n">selection</span><span class="o">=</span><span class="s1">&#39;protein&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;sstruc&#39;</span><span class="p">)</span>
 <span class="n">view</span><span class="o">.</span><span class="n">add_representation</span><span class="p">(</span><span class="n">repr_type</span><span class="o">=</span><span class="s1">&#39;licorice&#39;</span><span class="p">,</span> <span class="n">radius</span><span class="o">=</span><span class="s1">&#39;.5&#39;</span><span class="p">,</span> <span class="n">selection</span><span class="o">=</span><span class="n">ligandCode</span><span class="p">)</span>
@@ -14140,7 +14136,7 @@ var element = $('#613b0c52-ec60-4ae2-b8c9-cd151b95b566');
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Show protein</span>
-<span class="n">view</span> <span class="o">=</span> <span class="n">nglview</span><span class="o">.</span><span class="n">show_file</span><span class="p">(</span><span class="n">output_genion_gro</span><span class="p">)</span>
+<span class="n">view</span> <span class="o">=</span> <span class="n">nglview</span><span class="o">.</span><span class="n">show_structure_file</span><span class="p">(</span><span class="n">output_genion_gro</span><span class="p">)</span>
 <span class="n">view</span><span class="o">.</span><span class="n">clear_representations</span><span class="p">()</span>
 <span class="n">view</span><span class="o">.</span><span class="n">add_representation</span><span class="p">(</span><span class="n">repr_type</span><span class="o">=</span><span class="s1">&#39;cartoon&#39;</span><span class="p">,</span> <span class="n">selection</span><span class="o">=</span><span class="s1">&#39;protein&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;sstruc&#39;</span><span class="p">)</span>
 <span class="n">view</span><span class="o">.</span><span class="n">add_representation</span><span class="p">(</span><span class="n">repr_type</span><span class="o">=</span><span class="s1">&#39;licorice&#39;</span><span class="p">,</span> <span class="n">radius</span><span class="o">=</span><span class="s1">&#39;.5&#39;</span><span class="p">,</span> <span class="n">selection</span><span class="o">=</span><span class="n">ligandCode</span><span class="p">)</span>

@@ -30,10 +30,6 @@ git clone https://github.com/bioexcel/biobb_wf_protein-complex_md_setup.git
 cd biobb_wf_protein-complex_md_setup
 conda env create -f conda_env/environment.yml
 conda activate biobb_Protein-Complex_MDsetup_tutorial
-conda install -y -c bioconda biobb_analysis==2.0.1
-conda install -y -c bioconda biobb_chemistry==2.0.0
-jupyter-nbextension enable --py --user widgetsnbextension
-jupyter-nbextension enable --py --user nglview
 jupyter-notebook biobb_wf_protein-complex_md_setup/notebooks/biobb_Protein-Complex_MDsetup_tutorial.ipynb
 ```
 
@@ -152,16 +148,16 @@ Visualizing the generated **PDB structures** using **NGL**:
 
 ```python
 # Show structures: protein, ligand and protein-ligand complex
-view1 = nglview.show_file(proteinFile)
+view1 = nglview.show_structure_file(proteinFile)
 view1._remote_call('setSize', target='Widget', args=['350px','400px'])
 view1.camera='orthographic'
 view1
-view2 = nglview.show_file(ligandFile)
+view2 = nglview.show_structure_file(ligandFile)
 view2.add_representation(repr_type='ball+stick')
 view2._remote_call('setSize', target='Widget', args=['350px','400px'])
 view2.camera='orthographic'
 view2
-view3 = nglview.show_file(complexFile)
+view3 = nglview.show_structure_file(complexFile)
 view3.add_representation(repr_type='licorice', radius='.5', selection=ligandCode)
 view3._remote_call('setSize', target='Widget', args=['350px','400px'])
 view3.camera='orthographic'
@@ -311,17 +307,17 @@ Visualizing the small molecule generated **PDB structures** using **NGL**:
 ```python
 # Show different structures generated (for comparison)
 
-view1 = nglview.show_file(ligandFile)
+view1 = nglview.show_structure_file(ligandFile)
 view1.add_representation(repr_type='ball+stick')
 view1._remote_call('setSize', target='Widget', args=['350px','400px'])
 view1.camera='orthographic'
 view1
-view2 = nglview.show_file(output_reduce_h)
+view2 = nglview.show_structure_file(output_reduce_h)
 view2.add_representation(repr_type='ball+stick')
 view2._remote_call('setSize', target='Widget', args=['350px','400px'])
 view2.camera='orthographic'
 view2
-view3 = nglview.show_file(output_babel_min)
+view3 = nglview.show_structure_file(output_babel_min)
 view3.add_representation(repr_type='ball+stick')
 view3._remote_call('setSize', target='Widget', args=['350px','400px'])
 view3.camera='orthographic'
@@ -569,7 +565,7 @@ Note the **octahedral box** filled with **water molecules** surrounding the **pr
 
 ```python
 #Show protein
-view = nglview.show_file(output_solvate_gro)
+view = nglview.show_structure_file(output_solvate_gro)
 view.clear_representations()
 view.add_representation(repr_type='cartoon', selection='protein', color='sstruc')
 view.add_representation(repr_type='licorice', radius='.5', selection=ligandCode)
@@ -651,7 +647,7 @@ Visualizing the **protein-ligand complex** with the newly added **ionic concentr
 
 ```python
 #Show protein
-view = nglview.show_file(output_genion_gro)
+view = nglview.show_structure_file(output_genion_gro)
 view.clear_representations()
 view.add_representation(repr_type='cartoon', selection='protein', color='sstruc')
 view.add_representation(repr_type='licorice', radius='.5', selection=ligandCode)
