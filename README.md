@@ -38,10 +38,6 @@ git clone https://github.com/bioexcel/biobb_wf_protein-complex_md_setup.git
 cd biobb_wf_protein-complex_md_setup
 conda env create -f conda_env/environment.yml
 conda activate biobb_Protein-Complex_MDsetup_tutorial
-conda install -y -c bioconda biobb_analysis==2.0.1
-conda install -y -c bioconda biobb_chemistry==2.0.0
-jupyter-nbextension enable --py --user widgetsnbextension
-jupyter-nbextension enable --py --user nglview
 jupyter-notebook biobb_wf_protein-complex_md_setup/notebooks/biobb_Protein-Complex_MDsetup_tutorial.ipynb
 ```
 
