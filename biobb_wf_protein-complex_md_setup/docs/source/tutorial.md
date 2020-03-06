@@ -1019,7 +1019,7 @@ GMXEnergy(input_energy_path=output_npt_edr,
 
 ```python
 import plotly
-from plotly import tools
+from plotly import subplots
 import plotly.graph_objs as go
 
 # Read pressure and density data from file 
@@ -1042,7 +1042,7 @@ trace2 = go.Scatter(
     x=x,y=z
 )
 
-fig = tools.make_subplots(rows=1, cols=2, print_grid=False)
+fig = subplots.make_subplots(rows=1, cols=2, print_grid=False)
 
 fig.append_trace(trace1, 1, 1)
 fig.append_trace(trace2, 1, 2)
