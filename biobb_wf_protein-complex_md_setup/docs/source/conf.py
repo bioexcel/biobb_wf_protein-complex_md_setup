@@ -126,6 +126,7 @@ todo_include_todos = False
 # -- Options for HTML output ----------------------------------------------
 def setup(app):
     app.add_stylesheet('theme_overrides.css')
+    app.add_js_file('theme_overrides.js')
 
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
