@@ -54,6 +54,7 @@ jupyter-notebook biobb_wf_protein-complex_md_setup/notebooks/biobb_Protein-Compl
  15. [Free Molecular Dynamics Simulation](#free)
  16. [Post-processing and Visualizing Resulting 3D Trajectory](#post)
  17. [Output Files](#output)
+ 18. [Questions & Comments](#questions)
  
 ***
 <img src="https://bioexcel.eu/wp-content/uploads/2019/04/Bioexcell_logo_1080px_transp.png" alt="Bioexcel2 logo"
@@ -1386,3 +1387,15 @@ Important **Output files** generated:
  - 3HTB_JZ4_rms_exp.xvg: **Root Mean Square deviation (RMSd)** against **experimental structure** of the final **free MD run step**.
  - 3HTB_JZ4_rgyr.xvg: **Radius of Gyration** of the final **free MD run step** of the **setup pipeline**.
  
+***
+<a id="questions"></a>
+
+## Questions & Comments
+
+Questions, issues, suggestions and comments are really welcome!
+
+* GitHub issues:
+    * [https://github.com/bioexcel/biobb](https://github.com/bioexcel/biobb)
+
+* BioExcel forum:
+    * [https://ask.bioexcel.eu/c/BioExcel-Building-Blocks-library](https://ask.bioexcel.eu/c/BioExcel-Building-Blocks-library)
