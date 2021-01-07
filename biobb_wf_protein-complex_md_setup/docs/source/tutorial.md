@@ -606,9 +606,9 @@ from biobb_md.gromacs.grompp import Grompp
 # Create prop dict and inputs/outputs
 prop = {
     'mdp':{
-        'type': 'minimization',
         'nsteps':'5000'
-    }
+    },
+    'simulation_type':'minimization'
 }
 output_gppion_tpr = pdbCode+'_'+ligandCode+'_complex_gppion.tpr'
 
@@ -692,11 +692,11 @@ from biobb_md.gromacs.grompp import Grompp
 # Create prop dict and inputs/outputs
 prop = {
     'mdp':{
-        'type': 'minimization',
         'nsteps':'5000',
         'emstep': 0.01,
         'emtol':'500'
-    }
+    },
+    'simulation_type':'minimization'
 }
 output_gppmin_tpr = pdbCode+'_'+ligandCode+'_gppmin.tpr'
 
@@ -837,11 +837,11 @@ from biobb_md.gromacs.grompp import Grompp
 output_gppnvt_tpr = pdbCode+'_'+ligandCode+'gppnvt.tpr'
 prop = {
     'mdp':{
-        'type': 'nvt',
         'nsteps':'5000',
         'tc-grps': 'Protein_Other Water_and_ions',
-        'define': '-DPOSRES -D' + posresifdef
-    }
+        'Define': '-DPOSRES -D' + posresifdef
+    },
+    'simulation_type':'nvt'
 }
 
 # Create and launch bb
@@ -957,11 +957,11 @@ from biobb_md.gromacs.grompp import Grompp
 output_gppnpt_tpr = pdbCode+'_'+ligandCode+'_gppnpt.tpr'
 prop = {
     'mdp':{
-        'type': 'npt',
         'nsteps':'5000',
         'tc-grps': 'Protein_Other Water_and_ions',
-        'define': '-DPOSRES -D' + posresifdef
-    }
+        'Define': '-DPOSRES -D' + posresifdef
+    },
+    'simulation_type':'npt'
 }
 
 # Create and launch bb
@@ -1092,11 +1092,11 @@ from biobb_md.gromacs.grompp import Grompp
 # Create prop dict and inputs/outputs
 prop = {
     'mdp':{
-        'type': 'free',
         #'nsteps':'500000' # 1 ns (500,000 steps x 2fs per step)
         #'nsteps':'5000' # 10 ps (5,000 steps x 2fs per step)
         'nsteps':'25000' # 50 ps (25,000 steps x 2fs per step)
-    }
+    },
+    'simulation_type':'free'
 }
 output_gppmd_tpr = pdbCode+'_'+ligandCode + '_gppmd.tpr'
 

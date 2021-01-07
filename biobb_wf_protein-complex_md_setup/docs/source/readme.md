@@ -1,5 +1,5 @@
 [![](https://readthedocs.org/projects/biobb-wf-protein-complex-md-setup/badge/?version=latest)](https://biobb-wf-protein-complex-md-setup.readthedocs.io/en/latest/?badge=latest)
-[![](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/bioexcel/biobb_wf_protein-complex_md_setup/master?filepath=biobb_wf_protein-complex_md_setup%2Fnotebooks%2Fbiobb_Protein-Complex_MDsetup_tutorial.ipynb)
+[![](https://mybinder.org/badge_logo.svg)](https://bioexcel-binder.tsi.ebi.ac.uk/v2/gh/bioexcel/biobb_wf_protein-complex_md_setup/master?filepath=biobb_wf_protein-complex_md_setup%2Fnotebooks%2Fbiobb_Protein-Complex_MDsetup_tutorial.ipynb)
 
 # Protein Ligand Complex MD Setup tutorial using BioExcel Building Blocks (biobb)
 
@@ -52,7 +52,7 @@ Click here to [view tutorial in Read the Docs](https://biobb-wf-protein-complex-
 ***
 
 ## Version
-May 2020 Release
+2020.4
 
 ## Copyright & Licensing
 This software has been developed in the [MMB group](http://mmb.irbbarcelona.org) at the [BSC](http://www.bsc.es/) & [IRB](https://www.irbbarcelona.org/) for the [European BioExcel](http://bioexcel.eu/), funded by the European Commission (EU H2020 [823830](http://cordis.europa.eu/projects/823830), EU H2020 [675728](http://cordis.europa.eu/projects/675728)).

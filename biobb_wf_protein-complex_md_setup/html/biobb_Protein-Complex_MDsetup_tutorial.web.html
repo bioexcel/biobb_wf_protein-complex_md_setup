@@ -14069,9 +14069,9 @@ var element = $('#613b0c52-ec60-4ae2-b8c9-cd151b95b566');
 <span class="c1"># Create prop dict and inputs/outputs</span>
 <span class="n">prop</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s1">&#39;mdp&#39;</span><span class="p">:{</span>
-        <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;minimization&#39;</span><span class="p">,</span>
         <span class="s1">&#39;nsteps&#39;</span><span class="p">:</span><span class="s1">&#39;5000&#39;</span>
-    <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="s1">&#39;simulation_type&#39;</span><span class="p">:</span><span class="s1">&#39;minimization&#39;</span>
 <span class="p">}</span>
 <span class="n">output_gppion_tpr</span> <span class="o">=</span> <span class="n">pdbCode</span><span class="o">+</span><span class="s1">&#39;_&#39;</span><span class="o">+</span><span class="n">ligandCode</span><span class="o">+</span><span class="s1">&#39;_complex_gppion.tpr&#39;</span>
 
@@ -14249,11 +14249,11 @@ var element = $('#149f05b3-c8e6-4689-8780-8e86d878880d');
 <span class="c1"># Create prop dict and inputs/outputs</span>
 <span class="n">prop</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s1">&#39;mdp&#39;</span><span class="p">:{</span>
-        <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;minimization&#39;</span><span class="p">,</span>
         <span class="s1">&#39;nsteps&#39;</span><span class="p">:</span><span class="s1">&#39;5000&#39;</span><span class="p">,</span>
         <span class="s1">&#39;emstep&#39;</span><span class="p">:</span> <span class="mf">0.01</span><span class="p">,</span>
         <span class="s1">&#39;emtol&#39;</span><span class="p">:</span><span class="s1">&#39;500&#39;</span>
     <span class="p">}</span>
+    <span class="s1">&#39;simulation_type&#39;</span><span class="p">:</span><span class="s1">&#39;minimization&#39;</span>
 <span class="p">}</span>
 <span class="n">output_gppmin_tpr</span> <span class="o">=</span> <span class="n">pdbCode</span><span class="o">+</span><span class="s1">&#39;_&#39;</span><span class="o">+</span><span class="n">ligandCode</span><span class="o">+</span><span class="s1">&#39;_gppmin.tpr&#39;</span>
 
@@ -14544,11 +14544,11 @@ if (outputEl) {{
 <span class="n">output_gppnvt_tpr</span> <span class="o">=</span> <span class="n">pdbCode</span><span class="o">+</span><span class="s1">&#39;_&#39;</span><span class="o">+</span><span class="n">ligandCode</span><span class="o">+</span><span class="s1">&#39;gppnvt.tpr&#39;</span>
 <span class="n">prop</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s1">&#39;mdp&#39;</span><span class="p">:{</span>
-        <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;nvt&#39;</span><span class="p">,</span>
         <span class="s1">&#39;nsteps&#39;</span><span class="p">:</span><span class="s1">&#39;5000&#39;</span><span class="p">,</span>
         <span class="s1">&#39;tc-grps&#39;</span><span class="p">:</span> <span class="s1">&#39;Protein_Other Water_and_ions&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;define&#39;</span><span class="p">:</span> <span class="s1">&#39;-DPOSRES -D&#39;</span> <span class="o">+</span> <span class="n">posresifdef</span>
-    <span class="p">}</span>
+        <span class="s1">&#39;Define&#39;</span><span class="p">:</span> <span class="s1">&#39;-DPOSRES -D&#39;</span> <span class="o">+</span> <span class="n">posresifdef</span>
+    <span class="p">},</span>
+    <span class="s1">&#39;simulation_type&#39;</span><span class="p">:</span><span class="s1">&#39;nvt&#39;</span>
 <span class="p">}</span>
 
 <span class="c1"># Create and launch bb</span>
@@ -14803,11 +14803,11 @@ if (outputEl) {{
 <span class="n">output_gppnpt_tpr</span> <span class="o">=</span> <span class="n">pdbCode</span><span class="o">+</span><span class="s1">&#39;_&#39;</span><span class="o">+</span><span class="n">ligandCode</span><span class="o">+</span><span class="s1">&#39;_gppnpt.tpr&#39;</span>
 <span class="n">prop</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s1">&#39;mdp&#39;</span><span class="p">:{</span>
-        <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;npt&#39;</span><span class="p">,</span>
         <span class="s1">&#39;nsteps&#39;</span><span class="p">:</span><span class="s1">&#39;5000&#39;</span><span class="p">,</span>
         <span class="s1">&#39;tc-grps&#39;</span><span class="p">:</span> <span class="s1">&#39;Protein_Other Water_and_ions&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;define&#39;</span><span class="p">:</span> <span class="s1">&#39;-DPOSRES -D&#39;</span> <span class="o">+</span> <span class="n">posresifdef</span>
-    <span class="p">}</span>
+        <span class="s1">&#39;Define&#39;</span><span class="p">:</span> <span class="s1">&#39;-DPOSRES -D&#39;</span> <span class="o">+</span> <span class="n">posresifdef</span>
+    <span class="p">},</span>
+    <span class="s1">&#39;simulation_type&#39;</span><span class="p">:</span><span class="s1">&#39;npt&#39;</span>
 <span class="p">}</span>
 
 <span class="c1"># Create and launch bb</span>
@@ -15077,11 +15077,11 @@ if (outputEl) {{
 <span class="c1"># Create prop dict and inputs/outputs</span>
 <span class="n">prop</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s1">&#39;mdp&#39;</span><span class="p">:{</span>
-        <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;free&#39;</span><span class="p">,</span>
         <span class="c1">#&#39;nsteps&#39;:&#39;500000&#39; # 1 ns (500,000 steps x 2fs per step)</span>
         <span class="c1">#&#39;nsteps&#39;:&#39;5000&#39; # 10 ps (5,000 steps x 2fs per step)</span>
         <span class="s1">&#39;nsteps&#39;</span><span class="p">:</span><span class="s1">&#39;25000&#39;</span> <span class="c1"># 50 ps (25,000 steps x 2fs per step)</span>
-    <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="s1">&#39;simulation_type&#39;</span><span class="p">:</span><span class="s1">&#39;free&#39;</span>
 <span class="p">}</span>
 <span class="n">output_gppmd_tpr</span> <span class="o">=</span> <span class="n">pdbCode</span><span class="o">+</span><span class="s1">&#39;_&#39;</span><span class="o">+</span><span class="n">ligandCode</span> <span class="o">+</span> <span class="s1">&#39;_gppmd.tpr&#39;</span>
 

@@ -3,13 +3,12 @@ channels:
   - conda-forge
   - bioconda
 dependencies:
-  - biobb_common==3.0.0
-  - biobb_analysis==3.0.1
-  - biobb_io==3.0.0
-  - biobb_model==3.0.0
-  - biobb_md==3.0.0
-  - biobb_chemistry==3.0.1
-  - biobb_structure_utils==3.0.0
+  - biobb_analysis==3.5.0
+  - biobb_io==3.5.0
+  - biobb_model==3.5.0
+  - biobb_md==3.5.1
+  - biobb_chemistry==3.5.0
+  - biobb_structure_utils==3.5.1
   - plotly
   - nglview
   - simpletraj
