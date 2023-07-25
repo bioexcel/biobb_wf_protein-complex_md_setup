@@ -27,3 +27,4 @@ biobb_wf_protein-complex_md_setup/notebooks/*.docs.ipynb
 *.old.ipynb
 *.bk.ipynb
 \#*\#
+.DS_Store
