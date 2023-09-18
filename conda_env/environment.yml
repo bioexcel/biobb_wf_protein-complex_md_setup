@@ -3,15 +3,13 @@ channels:
   - conda-forge
   - bioconda
 dependencies:
-  - biobb_analysis==4.0.0
-  - biobb_io==4.0.0
-  - biobb_model==4.0.0
-  - biobb_gromacs==4.0.0
-  - biobb_chemistry==4.0.0
-  - biobb_structure_utils==4.0.0
-  - ipywidgets==7.6.6
+  - biobb_analysis==4.1.0
+  - biobb_io==4.1.0
+  - biobb_model==4.1.0
+  - biobb_gromacs==4.1.0
+  - biobb_chemistry==4.1.0
+  - biobb_structure_utils==4.1.0
   - jupyter_client==7.3.2
-  - tornado==6.1
   - nb_conda_kernels
   - importlib_metadata
   - jupyter_contrib_nbextensions
