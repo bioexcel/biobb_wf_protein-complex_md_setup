@@ -11,7 +11,7 @@ dependencies:
   - biobb_structure_utils==4.1.0
   - jupyter_client==7.3.2
   - nb_conda_kernels
-  - importlib_metadata
+  - traitlets==5.9.0
   - jupyter_contrib_nbextensions
   - plotly
   - nglview
