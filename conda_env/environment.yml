@@ -9,11 +9,7 @@ dependencies:
   - biobb_gromacs==4.1.0
   - biobb_chemistry==4.1.0
   - biobb_structure_utils==4.1.0
-  - jupyter_client==7.3.2
-  - nb_conda_kernels
-  - traitlets==5.9.0
-  - jupyter_contrib_nbextensions
+  - jupyter
   - plotly
   - nglview
   - simpletraj
-  - conda
