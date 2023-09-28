@@ -13985,26 +13985,18 @@ a.anchor-link {
 </ul>
 <p><strong>Auxiliar libraries</strong> used:</p>
 <ul>
-<li><a href="https://github.com/Anaconda-Platform/nb_conda_kernels">nb_conda_kernels</a>: Enables a Jupyter Notebook or JupyterLab application in one conda environment to access kernels for Python, R, and other languages found in other environments.</li>
+  <li><a href="https://jupyter.org/">jupyter</a>: Free software, open standards, and web services for interactive computing across all programming languages.</li>
 <li><a href="http://nglviewer.org/#nglview">nglview</a>: Jupyter/IPython widget to interactively view molecular structures and trajectories in notebooks.</li>
-<li><a href="https://github.com/jupyter-widgets/ipywidgets">ipywidgets</a>: Interactive HTML widgets for Jupyter notebooks and the IPython kernel.</li>
-<li><a href="https://docs.python.org/3/library/os.html">os</a>: Python miscellaneous operating system interfaces</li>
 <li><a href="https://plot.ly/python/offline/">plotly</a>: Python interactive graphing library integrated in Jupyter notebooks.</li>
 <li><a href="https://github.com/arose/simpletraj">simpletraj</a>: Lightweight coordinate-only trajectory reader based on code from GROMACS, MDAnalysis and VMD.</li>
 </ul>
 <h3 id="Conda-Installation-and-Launch">Conda Installation and Launch<a class="anchor-link" href="#Conda-Installation-and-Launch">&#182;</a></h3>
-<div class="highlight"><pre><span></span>
+<div class="highlight"><pre>
 <span class="go">git clone https://github.com/bioexcel/biobb_wf_protein-complex_md_setup.git</span>
 <span class="go">cd biobb_wf_protein-complex_md_setup</span>
 <span class="go">conda env create -f conda_env/environment.yml</span>
 <span class="go">conda activate biobb_Protein-Complex_MDsetup_tutorial</span>
-<span class="go">jupyter nbextension enable python-markdown/main</span>
 <span class="go">jupyter-notebook biobb_wf_protein-complex_md_setup/notebooks/biobb_Protein-Complex_MDsetup_tutorial.ipynb</span>
-</pre></div>
-<p>Please execute the following commands before launching the Jupyter Notebook if you experience some </p>
-<div class="highlight"><pre><span></span>
-<span class="go">jupyter-nbextension enable --py --user widgetsnbextension</span>
-<span class="go">jupyter-nbextension enable --py --user nglview</span>
 </pre></div>
 <hr>
 <h3 id="Pipeline-steps:">Pipeline steps:<a class="anchor-link" href="#Pipeline-steps:">&#182;</a></h3><ol>
