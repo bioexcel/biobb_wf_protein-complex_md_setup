@@ -33,7 +33,7 @@ jupyter-notebook biobb_wf_protein-complex_md_setup/notebooks/biobb_Protein-Compl
 ```
 
 ***
-### Pipeline steps:
+## Pipeline steps:
  1. [Input Parameters](#input)
  2. [Fetching PDB Structure](#fetch)
  3. [Fix Protein Structure](#fix)
