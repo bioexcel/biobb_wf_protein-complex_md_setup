@@ -1,5 +1,5 @@
 # Protein Ligand Complex MD Setup tutorial using BioExcel Building Blocks (biobb)
-### Based on the official Gromacs tutorial: http://www.mdtutorials.com/gmx/complex/index.html
+**Based on the official Gromacs tutorial: http://www.mdtutorials.com/gmx/complex/index.html**
 ***
 This tutorial aims to illustrate the process of **setting up a simulation system** containing a **protein in complex with a ligand**, step by step, using the **BioExcel Building Blocks library (biobb)**. The particular example used is the **T4 lysozyme** L99A/M102Q protein (PDB code 3HTB), in complex with the **2-propylphenol** small molecule (3-letter Code JZ4). 
 ***
