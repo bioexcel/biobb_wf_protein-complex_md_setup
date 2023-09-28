@@ -45,6 +45,8 @@ jupyter-notebook biobb_wf_protein-complex_md_setup/notebooks/biobb_Protein-Compl
 
 Click here to [view tutorial in Read the Docs](https://biobb-wf-protein-complex-md-setup.readthedocs.io/en/latest/index.html)
 
+Click here to [execute tutorial in Binder](https://mybinder.org/v2/gh/bioexcel/biobb_wf_protein-complex_md_setup/HEAD?labpath=biobb_wf_protein-complex_md_setup%2Fnotebooks%2Fbiobb_Protein-Complex_MDsetup_tutorial.ipynb)
+
 ***
 
 ## Version
