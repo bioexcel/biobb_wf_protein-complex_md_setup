@@ -13,3 +13,7 @@ build:
 # Build documentation in the docs/ directory with Sphinx
 sphinx:
    configuration: biobb_wf_protein-complex_md_setup/docs/source/conf.py
+
+python:
+  install:
+    - requirements: biobb_wf_protein-complex_md_setup/docs/requirements.txt
