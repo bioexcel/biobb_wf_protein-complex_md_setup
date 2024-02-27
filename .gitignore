@@ -24,6 +24,9 @@ biobb_wf_protein-complex_md_setup/notebooks/*.png
 biobb_wf_protein-complex_md_setup/notebooks/*.gif
 biobb_wf_protein-complex_md_setup/notebooks/*.web*.ipynb
 biobb_wf_protein-complex_md_setup/notebooks/*.docs.ipynb
+biobb_wf_protein-complex_md_setup/docs/notebooks
+biobb_wf_protein-complex_md_setup/html/biobb_Protein-Complex_MDsetup_tutorial.web.ipynb
+
 *.old.ipynb
 *.bk.ipynb
 \#*\#

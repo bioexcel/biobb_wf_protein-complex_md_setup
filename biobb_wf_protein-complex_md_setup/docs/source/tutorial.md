@@ -359,7 +359,7 @@ acpype_params_gmx(input_path=output_babel_min,
 <a id="restraints"></a>
 ***
 ## Preparing Ligand Restraints
-In subsequent steps of the pipeline, such as the equilibration stages of the **protein-ligand complex** system, it is recommended to apply some **restraints** to the small molecule, to avoid a possible change in position due to protein repulsion. **Position restraints** will be applied to the ligand, using a **force constant of 1000 KJ/mol\*nm^2** on the three coordinates: x, y and z. In this steps the **restriction files** will be created and integrated in the **ligand topology**.
+In subsequent steps of the pipeline, such as the equilibration stages of the **protein-ligand complex** system, it is recommended to apply some **restraints** to the small molecule, to avoid a possible change in position due to protein repulsion. **Position restraints** will be applied to the ligand, using a **force constant of 1000 kJ/mol\*nm^2** on the three coordinates: x, y and z. In this steps the **restriction files** will be created and integrated in the **ligand topology**.
 - [Step 1](#restraintsStep1): Creating an index file with a new group including just the **small molecule heavy atoms**.
 - [Step 2](#restraintsStep2): Generating the **position restraints** file.
 ***
@@ -661,7 +661,7 @@ view
 ## Energetically minimize the system
 Energetically minimize the **protein-ligand complex** till reaching a desired potential energy.
 - [Step 1](#emStep1): Creating portable binary run file for energy minimization
-- [Step 2](#emStep2): Energetically minimize the **protein-ligand complex** till reaching a force of 500 kJ mol-1 nm-1.
+- [Step 2](#emStep2): Energetically minimize the **protein-ligand complex** till reaching a force of 500 kJ/mol*nm.
 - [Step 3](#emStep3): Checking **energy minimization** results. Plotting energy by time during the **minimization** process.
 ***
 **Building Blocks** used:
@@ -672,7 +672,7 @@ Energetically minimize the **protein-ligand complex** till reaching a desired po
 
 <a id="emStep1"></a>
 ### Step 1: Creating portable binary run file for energy minimization
-Method used to run the **energy minimization** is a **steepest descent**, with a **maximum force of 500 KJ/mol\*nm^2**, and a minimization **step size of 1fs**. The **maximum number of steps** to perform if the maximum force is not reached is **5,000 steps**. 
+Method used to run the **energy minimization** is a **steepest descent**, with a **maximum force of 500 kJ/mol\*nm^2**, and a minimization **step size of 1fs**. The **maximum number of steps** to perform if the maximum force is not reached is **5,000 steps**. 
 
 
 ```python
@@ -746,7 +746,7 @@ gmx_energy(input_energy_path=output_min_edr,
 import plotly
 import plotly.graph_objs as go
 
-#Read data from file and filter energy values higher than 1000 Kj/mol^-1
+#Read data from file and filter energy values higher than 1000 kJ/mol
 with open(output_min_ene_xvg,'r') as energy_file:
     x,y = map(
         list,
@@ -764,7 +764,7 @@ fig = ({
     "data": [go.Scatter(x=x, y=y)],
     "layout": go.Layout(title="Energy Minimization",
                         xaxis=dict(title = "Energy Minimization Step"),
-                        yaxis=dict(title = "Potential Energy KJ/mol-1")
+                        yaxis=dict(title = "Potential Energy kJ/mol")
                        )
 })
 
