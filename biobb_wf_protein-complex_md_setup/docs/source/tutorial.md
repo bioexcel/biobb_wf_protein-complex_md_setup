@@ -1,7 +1,7 @@
 # Protein Ligand Complex MD Setup tutorial using BioExcel Building Blocks (biobb)
 **Based on the official Gromacs tutorial:** [http://www.mdtutorials.com/gmx/complex/index.html](http://www.mdtutorials.com/gmx/complex/index.html)
 ***
-This tutorial aims to illustrate the process of **setting up a simulation system** containing a **protein in complex with a ligand**, step by step, using the **BioExcel Building Blocks library (biobb)**. The particular example used is the **T4 lysozyme** L99A/M102Q protein (PDB code 3HTB), in complex with the **2-propylphenol** small molecule (3-letter Code JZ4). 
+This tutorial aims to illustrate the process of **setting up a simulation system** containing a **protein in complex with a ligand**, step by step, using the **BioExcel Building Blocks library (biobb)**. The particular example used is the **T4 lysozyme** L99A/M102Q protein (PDB code 3HTB, [https://doi.org/10.2210/pdb3HTB/pdb](https://doi.org/10.2210/pdb3HTB/pdb)), in complex with the **2-propylphenol** small molecule (3-letter Code JZ4, [https://www.rcsb.org/ligand/JZ4](https://www.rcsb.org/ligand/JZ4)). 
 ***
 
 ## Settings
@@ -63,8 +63,8 @@ jupyter-notebook biobb_wf_protein-complex_md_setup/notebooks/biobb_Protein-Compl
 <a id="input"></a>
 ## Input parameters
 **Input parameters** needed:
- - **pdbCode**: PDB code of the protein-ligand complex structure (e.g. 3HTB)
- - **ligandCode**: Small molecule 3-letter code for the ligand structure (e.g. JZ4)
+ - **pdbCode**: PDB code of the protein-ligand complex structure (e.g. 3HTB, [https://doi.org/10.2210/pdb3HTB/pdb](https://doi.org/10.2210/pdb3HTB/pdb))
+ - **ligandCode**: Small molecule 3-letter code for the ligand structure (e.g. JZ4, [https://www.rcsb.org/ligand/JZ4](https://www.rcsb.org/ligand/JZ4))
  - **mol_charge**: Charge of the small molecule, needed to add hydrogen atoms.
 
 
