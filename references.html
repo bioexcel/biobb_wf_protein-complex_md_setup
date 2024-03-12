@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Workflow references</title>
+</head>
+<body>
+
+  <div id="content"></div>
+  
+  <script>
+    const packages = ['biobb_io', 'biobb_model', 'biobb_gromacs', 'biobb_chemistry', 'biobb_analysis', 'biobb_structure_utils']
+
+    let targetElement = document.getElementById('content');
+
+    packages.forEach(pckg => {
+      fetch(`https://raw.githubusercontent.com/bioexcel/${pckg}/master/references.html`)
+          .then(response => response.text())
+          .then(data => {
+              targetElement.innerHTML += data;
+          })
+          .catch(error => console.error(error));
+    })
+  </script>
+  
+</body>
+</html>
