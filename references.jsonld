@@ -1,7 +1,8 @@
 {
   "@context": "http://schema.org",
-  "name": "Protein Ligand Complex MD Setup workflow",
+  "@id": "https://github.com/bioexcel/biobb_wf_protein-complex_md_setup",
   "@type": "ItemList",
+  "name": "Protein Ligand Complex MD Setup workflow",
   "itemListElement": [
     {
       "@type": "SoftwareApplication",
