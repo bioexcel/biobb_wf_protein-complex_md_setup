@@ -5,7 +5,7 @@ a:visited { color:#9e8830; }
 
 .highlight { background: #fffae4; }
 
-.rst-content dl:not(.docutils) dt { background: #d5f0f1; color: #29b3b5; border-top: solid 3px #29b3b5; }
+.rst-content dl:not(.docutils) dt { background: #d5f0f1!important; color: #29b3b5!important; border-top: solid 3px #29b3b5!important; }
 .rst-content .viewcode-link, .rst-content .viewcode-back { color: #dcbc3c; }
 .rst-versions .rst-current-version { color: #29b3b5; }
 
@@ -24,3 +24,31 @@ a:visited { color:#9e8830; }
 .ethical-rtd.ethical-dark-theme { display: none; }
 
 .icon:before { display:none; }
+
+.rst-content blockquote { margin-left: 0; background: #b5e0dd; padding: 15px; }
+.rst-content blockquote code.literal { color: #29b3b6; }
+
+dl.docutils dt {
+    background: transparent!important;
+    border-left: none!important;
+    font-size: 100%!important;
+    color: #404340!important;
+}
+
+.line-block .line:first-child {
+	display: none;
+}
+
+p.rubric:after {
+    content: ":";
+}
+
+@media not all and (min-resolution:.001dpcm)
+{ @supports (-webkit-appearance:none) {
+
+    dl.first.docutils { 
+
+        margin-top:-27px; 
+
+    }
+}}
