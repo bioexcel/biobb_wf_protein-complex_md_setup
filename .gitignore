@@ -17,6 +17,7 @@ guidelines.md
 *.itp
 *.top
 *.mol2
+*.stdin
 log.*
 .ipynb_checkpoints/
 biobb_wf_protein-complex_md_setup/notebooks/*/
