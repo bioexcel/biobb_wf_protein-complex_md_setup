@@ -113,6 +113,7 @@ import nglview
 import ipywidgets
 import os
 import zipfile
+import sys
 
 pdbCode = "3HTB"
 ligandCode = "JZ4"
@@ -132,6 +133,9 @@ Splitting the molecule in **three different files**:
 ***
 **Building Blocks** used:
  - [Pdb](https://biobb-io.readthedocs.io/en/latest/api.html#module-api.pdb) from **biobb_io.api.pdb**
+ - [ExtractHeteroAtoms](https://biobb-structure-utils.readthedocs.io/en/latest/utils.html#module-utils.extract_heteroatoms) from **biobb_structure_utils.utils.extract_heteroatoms**
+ - [ExtractMolecule](https://biobb-structure-utils.readthedocs.io/en/latest/utils.html#module-utils.extract_molecule) from **biobb_structure_utils.utils.extract_molecule**
+ - [CatPDB](https://biobb-structure-utils.readthedocs.io/en/latest/utils.html#module-utils.cat_pdb) from **biobb_structure_utils.utils.cat_pdb**
 ***
 
 
@@ -440,7 +444,7 @@ from biobb_gromacs.gromacs.genrestr import genrestr
 output_restraints_top = ligandCode+'_posres.itp'
 prop = {
     'force_constants': "1000 1000 1000",
-    'restrained_group': "System"
+    'restrained_group': "System_&_!H*"
 }
 
 # Create and launch bb
@@ -461,6 +465,7 @@ This new structure is needed for **GROMACS** as it is **force field-compliant**,
 ***
 **Building Blocks** used:
  - [GMXTrjConvStr](https://biobb-analysis.readthedocs.io/en/latest/gromacs.html#module-gromacs.gmx_trjconv_str) from **biobb_analysis.gromacs.gmx_trjconv_str**
+ - [CatPDB](https://biobb-structure-utils.readthedocs.io/en/latest/utils.html#module-utils.cat_pdb) from **biobb_structure_utils.utils.cat_pdb**
 ***
 
 
@@ -513,7 +518,7 @@ Building new **protein-ligand complex** GROMACS topology file with:
 NOTE: From this point on, the **protein-ligand complex structure and topology** generated can be used in a regular MD setup.
 ***
 **Building Blocks** used:
- - [AppendLigand](https://biobb-md.readthedocs.io/en/latest/modules.html) from **biobb_gromacs.gromacs_extra.append_ligand**  (NOTE: link should be updated with the documentation)
+ - [AppendLigand](https://biobb-gromacs.readthedocs.io/en/latest/gromacs_extra.html#gromacs-extra-append-ligand-module) from **biobb_gromacs.gromacs_extra.append_ligand**
 ***
 
 
@@ -640,7 +645,7 @@ prop = {
     'mdp':{
         'nsteps':'5000'
     },
-    'simulation_type':'minimization',
+    'simulation_type':'ions',
     'maxwarn': 1
 }
 output_gppion_tpr = pdbCode+'_'+ligandCode+'_complex_gppion.tpr'
@@ -653,8 +658,8 @@ grompp(input_gro_path=output_solvate_gro,
 ```
 
 <a id="ionsStep2"></a>
-### Step 2: Adding ions to neutralize the system and reach a 0.05 molar concentration
-Replace **solvent molecules** with **ions** to **neutralize** the system and reaching a **0.05 molar ionic concentration**
+### Step 2: Adding ions to neutralize the system
+Replace **solvent molecules** with **ions** to **neutralize** the system.
 
 
 ```python
@@ -664,7 +669,7 @@ from biobb_gromacs.gromacs.genion import genion
 # Create prop dict and inputs/outputs
 prop={
     'neutral':True,
-    'concentration':0.05
+    'concentration':0
 }
 output_genion_gro = pdbCode+'_'+ligandCode+'_genion.gro'
 output_genion_top_zip = pdbCode+'_'+ligandCode+'_genion_top.zip'
@@ -1356,16 +1361,16 @@ view
 ## Output files
 
 Important **Output files** generated:
- - {{output_md_gro}}: **Final structure** (snapshot) of the MD setup protocol.
- - {{output_md_trr}}: **Final trajectory** of the MD setup protocol.
- - {{output_md_cpt}}: **Final checkpoint file**, with information about the state of the simulation. It can be used to **restart** or **continue** a MD simulation.
- - {{output_gppmd_tpr}}: **Final tpr file**, GROMACS portable binary run input file. This file contains the starting structure of the **MD setup free MD simulation step**, together with the molecular topology and all the simulation parameters. It can be used to **extend** the simulation.
- - {{output_genion_top_zip}}: **Final topology** of the MD system. It is a compressed zip file including a **topology file** (.top) and a set of auxiliary **include topology** files (.itp).
+ - **output_md_gro** (3HTB_JZ4_md.gro): **Final structure** (snapshot) of the MD setup protocol.
+ - **output_md_trr** (3HTB_JZ4_md.trr): **Final trajectory** of the MD setup protocol.
+ - **output_md_cpt** (3HTB_JZ4_md.cpt): **Final checkpoint file**, with information about the state of the simulation. It can be used to **restart** or **continue** a MD simulation.
+ - **output_gppmd_tpr** (3HTB_JZ4_gppmd.tpr): **Final tpr file**, GROMACS portable binary run input file. This file contains the starting structure of the **MD setup free MD simulation step**, together with the molecular topology and all the simulation parameters. It can be used to **extend** the simulation.
+ - **output_genion_top_zip** (3HTB_JZ4_genion_top.zip): **Final topology** of the MD system. It is a compressed zip file including a **topology file** (.top) and a set of auxiliary **include topology** files (.itp).
 
 **Analysis** (MD setup check) output files generated:
- - {{output_rms_first}}: **Root Mean Square deviation (RMSd)** against **minimized and equilibrated structure** of the final **free MD run step**.
- - {{output_rms_exp}}: **Root Mean Square deviation (RMSd)** against **experimental structure** of the final **free MD run step**.
- - {{output_rgyr}}: **Radius of Gyration** of the final **free MD run step** of the **setup pipeline**.
+ - **output_rms_first** (3HTB_JZ4_rms_first.xvg): **Root Mean Square deviation (RMSd)** against **minimized and equilibrated structure** of the final **free MD run step**.
+ - **output_rms_exp** (3HTB_JZ4_rms_exp.xvg): **Root Mean Square deviation (RMSd)** against **experimental structure** of the final **free MD run step**.
+ - **output_rgyr** (3HTB_JZ4_rgyr.xvg): **Radius of Gyration** of the final **free MD run step** of the **setup pipeline**.
  
 
 ***
