@@ -1,2 +1,2 @@
 #!/bin/sh
-jupyter-nbextension enable nglview --py --sys-prefix
+#jupyter-nbextension enable nglview --py --sys-prefix
