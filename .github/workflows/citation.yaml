@@ -5,25 +5,28 @@ on:
     - cron: '0 0 * * 1' # Runs every Monday
   push:
     branches:
-      - main
+      - master
 
 jobs:
   sync:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v2
+      - uses: peter-murray/workflow-application-token-action@v3
+        id: generate_token
         with:
-          repository: bioexcel/biobb_wf_protein-complex_md_setup
-          path: ./
+          application_id: ${{ vars.GHAPUSH }}
+          application_private_key: ${{ secrets.GHAPUSH }}
+
+      - uses: actions/checkout@v3
+        with:
+          token: ${{ steps.generate_token.outputs.token }}
 
       - name: Download file using wget
         run: wget -O ./CITATION.cff https://raw.githubusercontent.com/bioexcel/biobb/master/CITATION.cff
 
-      - name: Check if file has changed
-        run: ls -la ./
-
       - name: Commit and push changes if file has changed
+        env:
+          GITHUB_TOKEN: ${{ steps.generate_token.outputs.token }}
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
