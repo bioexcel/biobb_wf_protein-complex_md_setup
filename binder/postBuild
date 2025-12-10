@@ -1,2 +1,3 @@
-#!/bin/sh
-#jupyter-nbextension enable nglview --py --sys-prefix
+#!/bin/bash
+jupyter nbextension install nglview --py --sys-prefix
+jupyter nbextension enable nglview --py --sys-prefix
