@@ -4,12 +4,12 @@ channels:
   - bioconda
   - nodefaults
 dependencies:
-  - biobb_analysis==5.2.1
-  - biobb_io==5.2.3
-  - biobb_model==5.2.1
-  - biobb_gromacs==5.2.1
-  - biobb_chemistry==5.2.1
-  - biobb_structure_utils==5.2.1
+  - biobb_io==5.3.1
+  - biobb_structure_utils==5.3.0
+  - biobb_chemistry==5.3.0
+  - biobb_analysis==5.3.0
+  - biobb_model==5.3.0
+  - biobb_gromacs==5.3.2
   - plotly
   - jupyterlab=3.6
   - nodejs=16
