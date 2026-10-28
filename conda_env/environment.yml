@@ -13,4 +13,5 @@ dependencies:
   - jupyter
   - plotly
   - nglview<=4.0
-  - simpletraj
+  - mdanalysis
+  - reduce
